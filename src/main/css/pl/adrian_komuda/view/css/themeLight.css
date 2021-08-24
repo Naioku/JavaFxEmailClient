@@ -1,9 +1,75 @@
-*{
-    -fx-background-color: white;
-    -fx-text-fill: black;
-
+AnchorPane {
+    -fx-background-color: #8fc2bd;
 }
 
-.big{
-   -fx-text-fill: #35568c;
+.big {
+   -fx-font-size: 16pt;
+}
+
+Button, Label, ChoiceBox, Slider {
+    -fx-text-fill: black;
+}
+
+Button {
+    -fx-background-color: #9fd3ce;
+    -fx-background-radius: 5;
+    -fx-border-color: #7eb1ac;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-radius: 5;
+    -fx-background-insets: 0;
+}
+
+Button:hover {
+    -fx-background-color: #9fd3ce88;
+    -fx-cursor: hand;
+}
+
+Button:pressed {
+    -fx-background-color: #9fd3ce44;
+}
+
+ChoiceBox {
+    -fx-background-color: #7eb1ac;
+}
+
+ChoiceBox :hover {
+    -fx-background-color: #7eb1acaa;
+    -fx-cursor: hand;
+}
+
+// Background color of the whole context menu
+ChoiceBox .context-menu {
+    -fx-background-color: #7eb1ac;
+}
+
+// Focused item background color in the list
+ChoiceBox .menu-item:focused {
+    -fx-background-color: #86b9b4;
+}
+
+// Text color of non-focused items in the list
+ChoiceBox .menu-item > .label {
+    -fx-text-fill: white;
+}
+
+// Text color of focused item in the list
+ChoiceBox .menu-item:focused > .label {
+    -fx-text-fill: black;
+}
+
+Slider .axis {
+    -fx-tick-label-fill: black;
+}
+
+Slider .track {
+    -fx-background-color: #7eb1ac;
+}
+
+Slider .thumb {
+    -fx-background-color: #9fd3ce;
+}
+
+Slider .thumb:hover {
+    -fx-background-color: #96c9c4;
+    -fx-cursor: hand;
 }

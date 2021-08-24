@@ -65,6 +65,7 @@ public class ViewFactory {
         stage.setScene(scene);
         stage.show();
         activeStages.add(stage);
+        updateStyles();
     }
 
     public void closeStage(Stage stageToClose) {

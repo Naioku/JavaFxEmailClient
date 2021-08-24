@@ -1,18 +1,22 @@
-*{
+AnchorPane {
     -fx-background-color: #575757;
-
 }
 
 .big {
    -fx-font-size: 16pt;
 }
 
-Button, Label, ChoiceBox, Slider {
+Button, Label, ChoiceBox, Slider, MenuBar .label {
     -fx-text-fill: white;
 }
 
 Button {
     -fx-background-color: #686868;
+    -fx-background-radius: 5;
+    -fx-border-color: #46464677;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-radius: 5;
+    -fx-background-insets: 0;
 }
 
 Button:hover {
@@ -20,8 +24,37 @@ Button:hover {
     -fx-cursor: hand;
 }
 
-ChoiceBox >* {
+Button:pressed {
+    -fx-background-color: #68686844;
+}
+
+ChoiceBox {
     -fx-background-color: #464646;
+}
+
+ChoiceBox:hover {
+    -fx-background-color: #464646aa;
+    -fx-cursor: hand;
+}
+
+// Background color of the whole context menu
+ChoiceBox .context-menu {
+    -fx-background-color: #464646;
+}
+
+// Focused item background color in the list
+ChoiceBox .menu-item:focused {
+    -fx-background-color: #4e4e4e;
+}
+
+// Text color of non-focused items in the list
+ChoiceBox .menu-item > .label {
+    -fx-text-fill: black;
+}
+
+// Text color of focused item in the list
+ChoiceBox .menu-item:focused > .label {
+    -fx-text-fill: white;
 }
 
 Slider .axis {
@@ -38,5 +71,31 @@ Slider .thumb {
 
 Slider .thumb:hover {
     -fx-background-color: #797979;
-     -fx-cursor: hand;
+    -fx-cursor: hand;
+}
+
+/*
+ * MENU BAR
+ */
+MenuBar {
+    -fx-background-color: #686868;
+}
+
+MenuBar .menu:hover, MenuBar .menu:showing {
+    -fx-background-color: #797979;
+}
+
+MenuBar .context-menu {
+    -fx-background-color: #686868;
+}
+
+MenuBar .menu-item:focused {
+    -fx-background-color: #797979;
+}
+
+/*
+ * TREE VIEW
+ */
+.tree-view {
+    -fx-background-color: #686868;
 }

@@ -1,8 +1,8 @@
 *{
-   -fx-font-size: 10pt;
+   -fx-font-size: 6pt;
 }
 
-.big{
-   -fx-font-size: 12pt;
-   -fx-text-fill: #35568c;
+.header{
+   -fx-font-size: 9pt;
+    -fx-alignment: center;
 }
